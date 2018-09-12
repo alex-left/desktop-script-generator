@@ -1,7 +1,7 @@
 # desktop-script-generator
 
-Bash script for generate a simple .desktop script. 
-Useful for custom or manual-installed programs. 
+Bash script for generate a simple .desktop script.
+Useful for custom or manual-installed programs.
 
 ## Usage
 
@@ -17,4 +17,16 @@ Useful for custom or manual-installed programs.
 
 ## Examples
 
-```./desktopgen.sh krita /opt/krita-3.2.0-x86_64.appimage -c "image;editor"```
+```
+desktopgen krita /opt/krita-3.2.0-x86_64.appimage -c "image;editor"
+```
+
+## Install
+clone project:
+
+    git clone https://github.com/alex-left/desktop-script-generator
+
+You can run install.sh to copy the script in PATH or use it from there
+```
+sudo bash install.sh
+```
