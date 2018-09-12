@@ -15,13 +15,6 @@ EOF
     return;
 }
 
-
-# check user privileges
-if [ $UID -ne 0 ]; then
-  echo "This program needs superuser's privileges"
-  exit 1
-fi
-
 # check help
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   usage
@@ -32,6 +25,12 @@ fi
 if [ $# -lt 2 ]; then
   echo "Insuficient args"
   usage
+fi
+
+# check user privileges
+if [ $UID -ne 0 ]; then
+  echo "This program needs superuser's privileges"
+  exit 1
 fi
 
 desktop_path=/usr/share/applications
